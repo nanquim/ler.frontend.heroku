@@ -1,5 +1,5 @@
 # Front-End - Ler.com
 
-```yarn install``
+```yarn install```
 
-```yarn start``
+```yarn start```
