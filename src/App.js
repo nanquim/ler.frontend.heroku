@@ -8,6 +8,10 @@ import Sobre from './componentes/Paginas/Sobre' */
 
 export default function App() {
   return (
+      <Menu />
+      <main>
+        <p>Aguarde...</p>
+      </main>
     <div>Aguarde...</div>
     /* <Router>
       <Menu />
