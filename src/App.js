@@ -1,19 +1,18 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import Menu from './componentes/Menu'
-/* import FormAssociar from './componentes/Formularios/Associar'
+import FormAssociar from './componentes/Formularios/Associar'
 import FormContato from './componentes/Formularios/Contato'
-import Sobre from './componentes/Paginas/Sobre' */
-//import Blog from './componentes/Blog'
+import Sobre from './componentes/Paginas/Sobre'
+import Blog from './componentes/Blog'
 
-export default function App() {
+/* 
+ TODO reutilizar forms, esta horrivel...
+*/
+
+ export default function App() {
   return (
-      <Menu />
-      <main>
-        <p>Aguarde...</p>
-      </main>
-    <div>Aguarde...</div>
-    /* <Router>
+    <Router>
       <Menu />
       <main>
         <Switch>
@@ -23,6 +22,6 @@ export default function App() {
           <Route path="/contato" component={FormContato} />
         </Switch>
       </main>
-    </Router> */
+    </Router>
   );
 }

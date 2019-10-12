@@ -4,7 +4,10 @@ import logo from '../../../logo.png'
 import Link from './Link'
 import './styles.css'
 
-/* TODO const cores = [] */
+/* TODO 
+     const cores = [] 
+     padrao do bs, nao arquivo css
+     */
 
 const NavBar = () => {
 

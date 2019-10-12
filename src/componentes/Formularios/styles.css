@@ -1,0 +1,14 @@
+.form-externo {
+    margin: 0 auto;
+    width: 30%;
+    height: 30%;
+}
+
+.form-externo h2 {
+    text-align: center;
+}
+
+.btn-enviar {
+    background-color: .023373;
+    color: #ffffff;
+}
