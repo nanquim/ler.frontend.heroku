@@ -8,16 +8,17 @@ import Blog from './componentes/Blog'
 
 export default function App() {
   return (
-    <Router>
+    <div>Aguarde...</div>
+    /* <Router>
       <Menu />
       <main>
         <Switch>
           <Route exact path="/" component={Blog} />
-         {/*  <Route path="/sobre" component={Sobre} />
+          <Route path="/sobre" component={Sobre} />
           <Route path="/associar" component={FormAssociar} />
-          <Route path="/contato" component={FormContato} /> */}
+          <Route path="/contato" component={FormContato} />
         </Switch>
       </main>
-    </Router>
+    </Router> */
   );
 }
