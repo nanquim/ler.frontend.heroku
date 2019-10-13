@@ -6,7 +6,7 @@ import '../styles.css'
 const FormAssociar = () => {
     return (
         <div className="form-externo p-3 d-flex flex-column">
-            <h2>Associe-se!</h2>
+            <h3>Associe-se!</h3>
             <div className="form-interno">
                 <form action="" method="post">
                     <div className="form-group">
