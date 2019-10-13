@@ -5,7 +5,7 @@ import './styles.css'
       img alt 
       alternar posicionamento 
 */
-
+ 
 const Pagina = ({ pagina }) => {
  
     // TODO alternar posicionamento 

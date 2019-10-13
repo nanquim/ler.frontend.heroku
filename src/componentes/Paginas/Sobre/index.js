@@ -3,6 +3,7 @@ import Pagina from '../PaginaContainer'
 import config from '../../../config'
 import './styles.css'
 
+/*  */
 function Sobre() {
 
     return (
