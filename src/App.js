@@ -5,6 +5,7 @@ import FormAssociar from './componentes/Formularios/Associar'
 import FormContato from './componentes/Formularios/Contato'
 import Sobre from './componentes/Paginas/Sobre'
 import Blog from './componentes/Blog'
+import './App.css'
 
 /* 
  TODO reutilizar forms, esta horrivel...
