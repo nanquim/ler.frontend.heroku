@@ -1,0 +1,40 @@
+#pagina {
+    width: 100%;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+}
+
+#pagina > *,
+.corpo > * {
+    margin: 5px;
+}
+
+.corpo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.imagem {
+    max-width: 30%;
+    height: auto;
+}
+
+.imagem img {
+    max-width: 100%;
+    height: auto;
+}
+
+.texto {
+    width: 70%;
+    height: auto;
+}
+
+.esquerda {
+    order: 1;
+}
+
+.direita {
+    order: 2;
+}

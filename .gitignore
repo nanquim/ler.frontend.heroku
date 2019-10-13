@@ -2,7 +2,7 @@
 
 src/componentes/Agenda
 src/componentes/Blog
-src/componentes/Paginas
+src/componentes/Paginas/Publicacoes
 
 src/rotas
 src/servicos
