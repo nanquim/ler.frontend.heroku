@@ -17,7 +17,6 @@ const Pagina = ({ pagina }) => {
             <div className="corpo">
                 <div className="imagem">
                     <img src={pagina.imgUrl} alt="" />
-                     
                 </div>
                 <div className="texto">
                     {pagina.texto}

@@ -1,4 +1,4 @@
-/* Container */
+/* container */
 .form-externo {
     margin: 0 auto;
     width: 30%;
@@ -7,10 +7,6 @@
 
 .form-externo h3 {
     text-align: center;
-}
-
-span {
-    color: red;
 }
 
 .btn-enviar {

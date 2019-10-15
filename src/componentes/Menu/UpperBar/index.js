@@ -3,7 +3,8 @@ import { FaSearch, FaFacebook } from "react-icons/fa";
 import './styles.css'
 
 /* TODO 
-       botao no icone da busca
+       icone de busca é botao
+       efeito no onchange       
 */
 
 const BarraSuperior = () => {

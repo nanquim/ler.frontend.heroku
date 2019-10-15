@@ -1,54 +1,126 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles.css'
 
-/* TODO retirar br, melhorar layout */
- 
+/* TODO form inline */
+
 const FormAssociar = () => {
+
+   const campos = { 
+       nome: '',
+       email: '', 
+       cpf: '', 
+       data_vencimento: '', 
+       data_nascimento: '', 
+       estudante: '' 
+    }
+
+    const [valores, setaValores] = useState(campos)
+
+    const atualizaCampo = e => {
+        setaValores({
+            ...valores,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const enviar = e => {
+        e.preventDefault()
+        console.log(valores)
+
+        /* TODO se post sucesso... */
+        reset()
+    }
+
+    const reset = () => {
+        setaValores(campos)
+    }
+
     return (
         <div className="form-externo p-3 d-flex flex-column">
             <h3>Associe-se!</h3>
             <div className="form-interno">
-                <form action="" method="post">
+                <form onSubmit={enviar}>
                     <div className="form-group">
-                        <label for="email">Endereço de e-mail: *</label>
-                        <input type="email" className="form-control" id="email" required />
+                        <label htmlFor="name">Nome Completo: <span>*</span></label>
+                        <input
+                            value={valores.nome}
+                            onChange={atualizaCampo}
+                            type="text"
+                            className="form-control"
+                            name="nome"
+                            id="name"
+                            required
+                        />
                     </div>
                     <div className="form-group">
-                        <label for="name">Nome completo: *</label>
-                        <input type="text" className="form-control" id="name" required />
+                        <label htmlFor="email">E-mail: <span>*</span></label>
+                        <input
+                            value={valores.email}
+                            onChange={atualizaCampo}
+                            type="email"
+                            className="form-control"
+                            name="email"
+                            id="email"
+                            required />
                     </div>
                     <div className="form-group">
-                        <label for="cpf">CPF: *</label>
-                        <input type="number" className="form-control" id="cpf" required />
+                        <label htmlFor="cpf">CPF: <span>*</span></label>
+                        <input
+                            value={valores.cpf}
+                            onChange={atualizaCampo}
+                            type="text"
+                            className="form-control"
+                            name="cpf"
+                            id="cpf"
+                            required
+                        />
                     </div>
                     <div className="form-group">
-                        <label for="data_venc_anuidade">Preferência data de vencimento da anuidade: *</label>
-                        <input type="date" className="form-control" id="data_venc_anuidade" required />
+                        <label htmlFor="data_venc_anuidade">
+                        Preferência de data de vencimento da anuidade: <span>*</span>
+                        </label>
+                        <input
+                            value={valores.data_vencimento}
+                            onChange={atualizaCampo}
+                            type="date"
+                            className="form-control"
+                            name="nome"
+                            id="data_venc_anuidade"
+                            required
+                        />
                     </div>
                     <div className="form-group">
-                        <label for="data_nascimento">Data de nascimento: *</label> <br />
-                        <input type="date" classNameCPF="form-control" id="data_nascimento" required />
+                        <label htmlFor="data_nascimento">Data de nascimento: <span>*</span>
+                        </label> <br />
+                        <input
+                            value={valores.data_nascimento}
+                            onChange={atualizaCampo}
+                            type="date"
+                            className="form-control"
+                            name="data_nascimento"
+                            id="data_nascimento"
+                            required />
                     </div>
                     <div className="form-group">
                         É estudante? <br />
-                    <div className="form-check">
-                            <input class="form-check-input" type="radio"
-                                name="exampleRadios"
-                                id="exampleRadios1" value="option1" checked />
-                            <label class="form-check-label" for="exampleRadios1">
-                                Default radio
-                              </label>
-                        </div>
-                    </div>
                         <div className="form-check">
                             <input class="form-check-input" type="radio"
-                                name="exampleRadios"
-                                id="exampleRadios1" value="option2" checked />
-                            <label class="form-check-label" for="exampleRadios1">
-                                Default radio
-                              </label>
+                                name="radioEstudante"
+                                id="estudante" value="sim" checked />
+                            <label class="form-check-label" for="estudante">
+                                Sim
+                            </label>
                         </div>
-                    <button type="submit" className="btn btn-primary ml-auto btn-enviar">Enviar</button>
+                    </div>
+                    <div className="form-check">
+                        <input class="form-check-input" type="radio"
+                            name="radioEstudante"
+                            id="estudante" value="nao" checked />
+                        <label class="form-check-label" for="estudante">
+                            Não
+                         </label>
+                    </div>
+                    <button className="btn btn-primary">Enviar</button>
                 </form>
             </div>
         </div>
