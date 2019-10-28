@@ -6,7 +6,7 @@ const Card = ({ item }) => {
   return (
      
     <article id="artigo" className="">
-        <a href={item.url}></a>
+        {/* <a href={item.url}></a> */}
         <div id="titulo" className="text-center">
           {item.title}
         </div>
