@@ -1,19 +1,56 @@
-/* Container */
-.form-externo {
+.container {
+    width: 100%;
+    min-height: 100%;
     margin: 0 auto;
-    width: 30%;
-    height: 30%;
+    padding: 2px;
 }
 
-.form-externo h3 {
+.container h3 {
     text-align: center;
 }
 
-span {
-    color: red;
+.formulario-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.linha {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.coluna{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-grupo {
+    /* width: 50%; */
+    
+    margin: 10px;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    display: block;
+    margin-top: 6px;
+    border-radius: 3px;
+}
+
 
 .btn-enviar {
     background-color: #023373;
     color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    width: 6vw;
+    height: 5vh;
+    cursor: pointer;
+}
+
+span {
+    color: red;
 }

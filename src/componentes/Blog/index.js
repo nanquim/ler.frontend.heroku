@@ -23,7 +23,7 @@ function Blog() {
         }
         fetchArtigos()
     }, [])
- 
+  
     return (
         <div className="container-cards">
             <div className="grid-cards">

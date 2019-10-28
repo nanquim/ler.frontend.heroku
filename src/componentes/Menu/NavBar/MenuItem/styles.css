@@ -1,8 +1,8 @@
 .menu-item {
- width: 14.28%;
- margin: 0;
- max-height: 100%;
- background-color: white; /* todo img */
+  width: 14.28%;
+  margin: 0;
+  max-height: 100%;
+  background-color: white; /* TODO img contain nao esta ok */
 }
 
 .menu-link {
