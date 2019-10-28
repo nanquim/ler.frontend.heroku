@@ -3,6 +3,7 @@
   margin: 0;
   max-height: 100%;
   background-color: white; /* TODO img contain nao esta ok */
+  cursor: pointer;
 }
 
 .menu-link {
