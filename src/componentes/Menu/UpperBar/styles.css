@@ -1,5 +1,31 @@
-/* TODO bs mr- nao pegou */
+.upperbar {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: flex-start;
+   padding: 10px;
+}
 
-#busca {
-    margin-left: 40%; 
+.upperbar > * {
+  width: 50%;
+}
+
+.pesquisa {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.pesquisa input {
+  border-radius: 5px;
+}
+.pesquisa > *, .social > * {
+    margin: 5px;
+}
+
+.btn-pesquisar {
+  all: unset;
+}
+
+.social {
+  justify-self: flex-end;
+  text-align: right;
 }

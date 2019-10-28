@@ -1,6 +1,6 @@
 import React from 'react'
 import Pagina from '../PaginaContainer'
-import config from '../../../config'
+import config from '../../../config/paginas.json'
 import './styles.css'
 
 /*  */

@@ -1,23 +1,49 @@
-import React from 'react';
-import { FaSearch, FaFacebook } from "react-icons/fa";
+import React, { useState } from 'react';
+import { FaSearch, FaFacebook, FaInstagram } from "react-icons/fa";
 import './styles.css'
 
-/* TODO 
-       icone de busca é botao
-       efeito no onchange       
-*/
+const UpperBar = () => {
 
-const BarraSuperior = () => {
-  
+    const [ query, setQuery ] = useState('')
+ 
+    const atualizaQuery = e => {
+        e.preventDefault()
+        setQuery(e.target.value)
+    } 
+
+    const pesquisar = e => {
+        //enviar....
+    }
+   
     return (
-        <div className="px-3 py-1 d-flex flex-row">
-            <div id="busca" className="d-flex flex-row">
-                <input type="text" className="mr-2 form-control" placeholder="Pesquisar..."/>
-                <FaSearch color="#023373" size="30px"/>
+        <div className="upperbar">
+            <div className="pesquisa">
+                <input 
+                    value={query}
+                    onChange={atualizaQuery}
+                    name=""
+                    id=""
+                    type="text" 
+                    placeholder="Pesquisar..."/>
+
+                <button 
+                    onClick={pesquisar}
+                    className="btn-pesquisar"
+                    >
+                    <FaSearch 
+                        color="#023373"
+                        size="30px"/>
+                </button>
             </div>
-            <div className="social ml-auto">
+            <div className="social">
+                {/* TODO componente a */}
                 <a
-                    target="_blansk" rel="noopener noreferrer"
+                    target="_blank" rel="noopener noreferrer"
+                    href="https://www.instagram.com/ler.comassociacao/?igshid=3bsbr5grtypi">
+                    <i><FaInstagram size="40px" color="#023373" /></i>
+                </a>
+                <a
+                    target="_blank" rel="noopener noreferrer"
                     href="https://www.facebook.com/ler.comassociacao/">
                     <i><FaFacebook size="40px" color="#023373" /></i>
                 </a>
@@ -26,4 +52,4 @@ const BarraSuperior = () => {
     )
 }
 
-export default BarraSuperior;
+export default UpperBar;

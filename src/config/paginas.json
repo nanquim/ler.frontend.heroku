@@ -1,36 +1,4 @@
 {
-    "links": [
-        {
-            "titulo": "A Associação",
-            "href": "/sobre",
-            "cor": "#023373"
-        },
-        {
-            "titulo": "Publicações",
-            "href": "/publicacoes",
-            "cor": "#048C73"
-        },
-        {
-            "titulo": "Agenda",
-            "href": "/agenda",
-            "cor": "#03A64A"
-        },
-        {
-            "titulo": "Grupos de estudo",
-            "href": "/grupos",
-            "cor": "#023373"
-        },
-        {
-            "titulo": "Associe-se",
-            "href": "/associar",
-            "cor": "#048C73"
-        },
-        {
-            "titulo": "Contato",
-            "href": "/contato",
-            "cor": "#03A64A"
-        }
-    ],
     "paginas": [
         {
             "titulo": "Missão e Valores",
