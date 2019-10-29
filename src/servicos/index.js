@@ -1,16 +1,46 @@
-/* TODO teste blog */
-
-const API_KEY = 'apiKey=be7e4435c377405eb9afc514c077445f'
-//const QUERY_ALL_BR = 'https://newsapi.org/v2/top-headlines?country=br&'
-//http://ec2-54-226-67-99.compute-1.amazonaws.com:8080/blog/
-const QUERY_ALL_BR = 'https://newsapi.org/v2/top-headlines?language=pt&'
+const ENV = process.env.NODE_ENV
+const PATH = '/blog'
+const API = 'http://ec2-54-226-67-99.compute-1.amazonaws.com:8080/ler.com'
 
 export const GetArtigos = async () => {
-    
-    const request = QUERY_ALL_BR + API_KEY
 
-    const artigos = await fetch(`${request}`).then(res => res.json())
+    let request = setRequest()
+    
+    const artigos = await fetch(`${request}`)
+                         /*  .then(res => console.log(res)) */
+                          .then(res => res.json())
+                          .catch(e => console.log(e))
         
-    console.log(artigos.articles)
-    return artigos.articles
+    /* console.log('artigos')
+    console.log(artigos) */
+
+    return artigos
+}
+
+export const GetArtigosId = async (id) => {
+    
+    let request = setRequest()
+
+    request += '?id=' + id
+
+    const artigo = await fetch(`${request}`).then(res => res.json())
+     
+    return artigo
+}
+
+const setRequest = () => {
+    let request = ''
+    
+    switch(ENV) {
+        case 'development':
+            request = PATH;
+            break;
+        case 'production':
+            request = API + PATH
+            break;
+        default:
+            console.log('ambiente nao encontrado')
+    }
+    
+    return request;
 }
